@@ -1,2 +1,31 @@
-# Korean-Conversations-Classification
-BERT Model-Based Korean Conversation Classification
+# 🗨️한국어 대화 분류 및 요약💬
+- BERT Model-Based Korean Conversation Classification
+
+## 📌 프로젝트 배경
+
+- 자연어 처리를 활용한 AI 대화 서비스, 음성 제어 서비스의 수요가 늘고 있으며, 계속해서 발전되고 있음. 자연어를 대상으로 하는 의도 분류는 많은 연구가 진행되고 있지만 일상 대화 주제 분류 연구는 많지 않기에 한국어 대화 주제 분류 및 요약 시스템을 구현을 진행함.
+
+### 🛠️ 개발환경 및 언어
+
+- 개발환경 : Jupyter Notebook, Pytorch, Tensorflow
+- 개발언어 : Python
+
+## 📌 프로젝트 목표
+
+- 검색 및 크롤링을 통해 대화 텍스트 수집
+- 한국어 특성을 고려하여 텍스트 데이터 전처리
+- 언어 기반 모델을 통해 대화 주제 파악 및 요약
+- 테스트를 통해 정확도 검증 및 성능 향상
+
+### ⭐ Preprocessing
+
+- **이상치 제거**를 위해 사분위수를 활용하여 10글자 이하의 문장 삭제
+- **정규표현식**을 적용해 불용어 제거
+- **PyKoSpacing**을 사용하여 불용어 제거로 생긴 비정상적인 공백 형식 교정
+- 한국어 구어체 전용 맞춤법 교정 모델인 ET5 Text2Text Generation Transformer Model을 사용하여 **맞춤법 교정**
+- 텍스트 데이터를 숫자 벡터로 변환하는 텍스트 **임베딩 추출 함수** 정의
+
+### ⭐ Modeling
+
+- **양방향 문맥**을 이해하고 문자 내의 단어 간 관계를 학습하는 BiLSTM과 KLUE-BERT 모델 생성 및 성능 비교
+- 양방향 **GRU** 모델을 생성하여 성능이 더 좋았던 **BiLSTM** 과 성능 비교
