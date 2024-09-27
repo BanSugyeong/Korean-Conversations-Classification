@@ -1,4 +1,4 @@
-# 🗨️한국어 대화 분류 및 요약💬
+# 🗨️😄한국어 대화 분류 및 요약😄💬
 - BERT Model-Based Korean Conversation Classification
 
 ## 📌 프로젝트 배경
